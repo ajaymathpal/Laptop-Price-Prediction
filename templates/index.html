@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Laptop Price Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="cursor"></div>
+
+<div class="app">
+    <h1>💻 AI Laptop Price Predictor</h1>
+
+    <div class="grid">
+
+        <!-- BRAND -->
+        <div class="field">
+            <label>Brand</label>
+            <div class="dropdown" data-name="company">
+                <div class="dropdown-btn">Choose Brand</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- TYPE -->
+        <div class="field">
+            <label>Laptop Type</label>
+            <div class="dropdown" data-name="type">
+                <div class="dropdown-btn">Choose Type</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- CPU -->
+        <div class="field">
+            <label>CPU</label>
+            <div class="dropdown" data-name="cpu">
+                <div class="dropdown-btn">Choose CPU</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- GPU -->
+        <div class="field">
+            <label>GPU</label>
+            <div class="dropdown" data-name="gpu">
+                <div class="dropdown-btn">Choose GPU</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- OS -->
+        <div class="field">
+            <label>Operating System</label>
+            <div class="dropdown" data-name="os">
+                <div class="dropdown-btn">Choose OS</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- RAM -->
+        <div class="field">
+            <label>RAM (GB)</label>
+            <div class="dropdown" data-name="ram">
+                <div class="dropdown-btn">Choose RAM</div>
+                <div class="dropdown-menu"></div>
+            </div>
+        </div>
+
+        <!-- OTHER INPUTS -->
+        <div class="field">
+            <label>Weight (kg)</label>
+            <input id="weight" type="number" step="0.1">
+        </div>
+
+        <div class="field">
+            <label>Screen Size (inch)</label>
+            <input id="screen_size" type="number" step="0.1">
+        </div>
+
+        <div class="field">
+            <label>Touchscreen</label>
+            <select id="touchscreen">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>IPS Display</label>
+            <select id="ips">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Resolution</label>
+            <select id="resolution">
+                <option>1920x1080</option>
+                <option>1366x768</option>
+                <option>1600x900</option>
+                <option>3200x1800</option>
+                <option>3840x2160</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>HDD (GB)</label>
+            <input id="hdd" type="number">
+        </div>
+
+        <div class="field">
+            <label>SSD (GB)</label>
+            <input id="ssd" type="number">
+        </div>
+
+    </div>
+
+    <button onclick="predict()">🚀 Predict Price</button>
+    <div id="result"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

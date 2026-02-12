@@ -1,0 +1,135 @@
+:root {
+    --bg: #020617;
+    --card: rgba(255,255,255,0.06);
+    --neon: #6ef3ff;
+    --text: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    font-family: Inter, sans-serif;
+}
+
+.cursor {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--neon);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.app {
+    width: 920px;
+    padding: 40px;
+    background: var(--card);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* FIELD */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 14px;
+    color: #9ca3af;
+    padding-left: 4px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-btn,
+select,
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text);
+}
+
+.dropdown-btn {
+    user-select: none;
+}
+
+.dropdown.open .dropdown-btn {
+    border-color: var(--neon);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    background: #020617;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s ease;
+    z-index: 1000;
+}
+
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    padding: 12px 14px;
+}
+
+.dropdown-item:hover {
+    background: rgba(110,243,255,0.15);
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, var(--neon), #8b5cf6);
+    font-size: 18px;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+}
